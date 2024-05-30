@@ -51,7 +51,7 @@ body {
                     linear-gradient(45deg, #FF0000, #FF5500, #FFA500, #FFFF00, #AAFF00, #00FF00, #00FF55, #0000FF, #0000AA, #4B0082, #8B008B, #EE82EE);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  transition: transform 0.1s ease, margin-bottom 0.3s ease;
+  transition: margin-bottom 0.3s ease;
   background-size: 100% 100%, 400% 400%;
   animation: rainbowAnimation 5s linear infinite;
 }
@@ -103,23 +103,11 @@ h1 {
   100% { background-position: 0% 50%; }
 }
 
-h2 {
+.link-footer {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
-}
-
-.linktree .link-button {
-  transition: transform 0.3s ease, margin-bottom 0.3s ease;
-}
-
-.link-button:hover {
-  transform: none; /* Entfernt den Neigungseffekt */
-}
-
-.link-button:hover .dropdown-content {
-  display: block;
 }
