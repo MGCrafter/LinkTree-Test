@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@button-width: 80%;
+@button-padding: 2px 2px;
+@button-font-size: 30px;
+@border-width: 1px;
+
+.linktree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Hinter den anderen Elementen platzieren */
+}
+
+.link-button {
+  display: flex; /* Verwende Flexbox, um den Inhalt zu zentrieren */
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+  background-color: #362b3c;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding: @button-padding;
+  font-size: @button-font-size;
+  width: @button-width;
+  max-width: 600px;
+  height: 111px; /* Feste Höhe */
+  box-sizing: border-box;
+  border: @border-width solid transparent;
+  background-image: linear-gradient(#362b3c, #362b3c),
+                    linear-gradient(45deg, #FF0000, #FF5500, #FFA500, #FFFF00, #AAFF00, #00FF00, #00FF55, #0000FF, #0000AA, #4B0082, #8B008B, #EE82EE);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-background-clip: content-box, border-box;
+  transition: transform 0.1s ease; /* Kurze Transition für sanfte Bewegung */
+  background-size: 100% 100%, 400% 400%;
+  animation: rainbowAnimation 5s linear infinite;
+  
+  &:hover {
+    transform: rotate(5deg); /* Neigung um 5 Grad beim Hover */
+  }
+}
+
+@keyframes rainbowAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(45deg, #FF0000, #FF5500, #FFA500, #FFFF00, #AAFF00, #00FF00, #00FF55, #0000FF, #0000AA, #4B0082, #8B008B, #EE82EE);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: rainbowText 5s linear infinite;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes rainbowText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
