@@ -1,44 +1,18 @@
-<<<<<<< Updated upstream
-#adminSection {
-  margin-top: 40px;
-=======
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-:root {
-  --button-width: 80%;
-  --button-padding: 2px 2px;
-  --button-font-size: 30px;
-  --border-width: 1px;
-}
+
+@button-width: 80%;
+@button-padding: 2px 2px;
+@button-font-size: 30px;
+@border-width: 1px;
 
 .linktree {
   position: relative;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 35px;
 }
 
-<<<<<<< Updated upstream
-#linkInputs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.input-wrapper {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.input-wrapper input {
-  padding: 5px;
-  font-size: 14px;
-}
-
-#addLink, #saveLinks, #adminLogout {
-=======
 #backgroundVideo {
   position: fixed;
   top: 0;
@@ -53,49 +27,31 @@
   display: flex; /* Verwende Flexbox, um den Inhalt zu zentrieren */
   justify-content: center; /* Horizontale Zentrierung */
   align-items: center; /* Vertikale Zentrierung */
->>>>>>> Stashed changes
   background-color: #362b3c;
+  text-align: center;
+  text-decoration: none;
   color: white;
-<<<<<<< Updated upstream
-  border: 1px solid transparent;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-#addLink:hover, #saveLinks:hover, #adminLogout:hover {
-  background-color: #524363;
-  border-color: #524363;
-}
-h3{
-    display: relative;
-    font-size: 25px;
-    color: white;
-    text-align: center;
-    
-
-}
-=======
   position: relative;
-  padding: var(--button-padding);
-  font-size: var(--button-font-size);
-  width: var(--button-width);
+  padding: @button-padding;
+  font-size: @button-font-size;
+  width: @button-width;
   max-width: 600px;
   height: 111px; /* Feste Höhe */
   box-sizing: border-box;
-  border: var(--border-width) solid transparent;
+  border: @border-width solid transparent;
   background-image: linear-gradient(#362b3c, #362b3c),
                     linear-gradient(45deg, #FF0000, #FF5500, #FFA500, #FFFF00, #AAFF00, #00FF00, #00FF55, #0000FF, #0000AA, #4B0082, #8B008B, #EE82EE);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  -webkit-background-clip: content-box, border-box;
   transition: transform 0.1s ease; /* Kurze Transition für sanfte Bewegung */
   background-size: 100% 100%, 400% 400%;
   animation: rainbowAnimation 5s linear infinite;
+  
+  &:hover {
+    transform: rotate(5deg); /* Neigung um 5 Grad beim Hover */
+  }
 }
-
 
 @keyframes rainbowAnimation {
   0% { background-position: 0% 50%; }
@@ -103,26 +59,20 @@ h3{
   100% { background-position: 0% 50%; }
 }
 
-.link-button {
-  background-size: 100% 100%, 400% 400%;
-  animation: rainbowAnimation 5s linear infinite;
-}
-
 h1 {
   font-size: 60px;
-  font-weight: bold;
-  color: #fff;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
   background: linear-gradient(45deg, #FF0000, #FF5500, #FFA500, #FFFF00, #AAFF00, #00FF00, #00FF55, #0000FF, #0000AA, #4B0082, #8B008B, #EE82EE);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400% 400%;
   animation: rainbowText 5s linear infinite;
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @keyframes rainbowText {
@@ -130,6 +80,7 @@ h1 {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 h2 {
   font-size: 25px;
   font-weight: bold;
@@ -138,9 +89,3 @@ h2 {
   text-align: center;
   position: relative;
 }
-
-/* Hover-Effekt für den Button hinzufügen */
-.link-button:hover {
-  transform: rotate(5deg); /* Neigung um 5 Grad beim Hover */
-}
->>>>>>> Stashed changes
