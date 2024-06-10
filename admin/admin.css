@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #454344;
 }
 
 form {
@@ -9,14 +10,21 @@ form {
     width: 300px;
     margin-bottom: 20px;
 }
-
+#link-form{
+    position: relative;
+    margin: 0 auto;
+}
+h1{
+    color: white;
+    text-align: center;
+}
 input, button {
     margin-bottom: 10px;
     padding: 10px;
 }
 
 button {
-    background-color: #28a745;
+    background-color: #e61c87;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -24,7 +32,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #910d54;
 }
 
 #cancel-button {
@@ -39,10 +47,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
 }
 
 th, td {
@@ -50,10 +60,10 @@ th, td {
     text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
-}
-
 td button {
     margin-right: 5px;
+}
+a{
+    text-decoration: underline;
+    color:white;
 }
