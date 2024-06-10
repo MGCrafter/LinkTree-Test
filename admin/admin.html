@@ -4,28 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="admin.css">
+     <link rel="stylesheet/less" type="text/css" href="admin.less">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
 </head>
 <body>
-    <h1>Admin Panel</h1>
-    <form id="link-form">
-        <input type="hidden" id="link-id">
-        <input type="text" id="title" placeholder="Titel" required>
-        <input type="url" id="url" placeholder="URL" required>
-        <button type="submit">Speichern</button>
-        <button type="button" id="cancel-button" style="display: none;">Abbrechen</button>
-    </form>
-    <table id="links-table">
-        <thead>
-            <tr>
-                <th>Titel</th>
-                <th>URL</th>
-                <th>Aktionen</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#" class="tab-link" data-tab="general">General</a>
+                <a href="#" class="tab-link" data-tab="users">Users</a>
+                <a href="#" class="tab-link" data-tab="files">Files</a>
+                <a href="#" class="tab-link" data-tab="analytics">Analytics</a>
+                <a href="#" class="tab-link" data-tab="help">Help</a>
+                <a href="#" class="tab-link" data-tab="settings">Settings</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Admin Panel</h1>
+            <div id="general" class="tab-content active">
+                <h2>General</h2>
+                <form id="link-form">
+                    <input type="hidden" id="link-id">
+                    <input type="text" id="title" placeholder="Titel" required>
+                    <input type="url" id="url" placeholder="URL" required>
+                    <button type="submit">Speichern</button>
+                    <button type="button" id="cancel-button" style="display: none;">Abbrechen</button>
+                </form>
+                <table id="links-table">
+                    <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>URL</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="users" class="tab-content">
+                <h2>Users</h2>
+                 <form id="user-form">
+                    <input type="hidden" id="user-id">
+                    <input type="text" id="user-name" placeholder="Name" required>
+                    <input type="email" id="user-email" placeholder="E-Mail" required>
+                    <input type="password" id="user-password" placeholder="Passwort" required>
+                    <button type="submit">Speichern</button>
+                    <button type="button" id="cancel-user-button" style="display: none;">Abbrechen</button>
+                </form>
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>E-Mail</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="files" class="tab-content">
+                <h2>Files</h2>
+                <!-- Inhalte für den Files-Tab -->
+            </div>
+            <div id="analytics" class="tab-content">
+                <h2>Analytics</h2>
+                <!-- Inhalte für den Analytics-Tab -->
+            </div>
+            <div id="help" class="tab-content">
+                <h2>Help</h2>
+                <!-- Inhalte für den Help-Tab -->
+            </div>
+            <div id="settings" class="tab-content">
+                <h2>Settings</h2>
+                <!-- Inhalte für den Settings-Tab -->
+            </div>
+        </main>
+    </div>
     <script src="admin.js"></script>
 </body>
 </html>

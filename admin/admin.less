@@ -1,0 +1,234 @@
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@font-family: 'Pacifico, cursive';
+@background-color: #454344;
+@sidebar-bg: #1f1f1f;
+@accent-color: #e61c87;
+@text-color: white;
+@border-color: @accent-color;
+@input-border-color: #ddd;
+@cancel-bg: #dc3545;
+@hover-bg: darken(@accent-color, 20%);
+@cancel-hover-bg: darken(@cancel-bg, 10%);
+
+// Mixins
+.box-shadow(@x: 2px, @y: 0, @blur: 5px, @color: rgba(0,0,0,0.1)) {
+  box-shadow: @x @y @blur @color;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column(@align-items: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: @align-items;
+}
+
+// Styles
+button{
+    width: 10%;
+    padding: 10px;
+    background-color: @accent-color;
+    color: @text-color;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover{
+        background-color: @hover-bg;
+    }
+}
+body {
+  font-family: @font-family;
+  padding: 0;
+  margin: 0;
+  background-color: @background-color;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: @sidebar-bg;
+  .flex-column(center);
+  padding-top: 20px;
+  .box-shadow(2px, 0, 5px);
+}
+
+.sidebar-menu {
+  .flex-column(center);
+  gap: 15px;
+}
+
+.tab-link {
+  text-decoration: none;
+  color: @text-color;
+  padding: 10px;
+  &:hover {
+    background-color: #333;
+    border-radius: 5px;
+  }
+    &.active {
+        background-color: #333;
+    }
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: @background-color;
+  color: @text-color;
+}
+
+h1, h2 {
+  color: @text-color;
+}
+
+.form-box {
+  background-color: @sidebar-bg;
+  padding: 20px;
+  border-radius: 5px;
+  .box-shadow(0, 0, 10px);
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid @input-border-color;
+    border-radius: 5px;
+    outline: none;
+  }
+}
+
+.submit-button,
+.cancel-button {
+  width: 100%;
+  padding: 10px;
+  background-color: @accent-color;
+  color: @text-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: @hover-bg;
+  }
+}
+
+.cancel-button {
+  background-color: @cancel-bg;
+
+  &:hover {
+    background-color: @cancel-hover-bg;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid @border-color;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: @border-color;
+  }
+
+  td {
+    button {
+        margin-right: 20px;
+        margin-bottom: 12px;
+        width: 100%;
+        padding: 10px;
+        background-color: @accent-color;
+        color: @text-color;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: @text-color;
+  }
+}
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+#link-form {
+  input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid @input-border-color;
+    border-radius: 3px;
+  }
+
+  button {
+    width: 10%;
+    padding: 10px;
+    background-color: @accent-color;
+    color: @text-color;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+    #cancel-button{
+        background-color: red;
+    }
+}
+#user-form{
+  input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid @input-border-color;
+    border-radius: 3px;
+  }
+
+  button {
+    width: 10%;
+    padding: 10px;
+    background-color: @accent-color;
+    color: @text-color;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+    #cancel-button{
+        background-color: red;
+    }
+}
+
+#users-table {
+    button{
+        width: 30%;
+    }
+}
