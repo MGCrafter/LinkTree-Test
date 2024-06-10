@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const token = localStorage.getItem('directusToken');
+    const token = sessionStorage.getItem('directusToken');
     if (!token) {
         window.location.href = 'login.html';
         return;

@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const token = sessionStorage.getItem('directusToken');
+    if (token) {
+        // Wenn ein Token existiert, weiterleiten zum Admin-Panel
+        window.location.href = 'admin.html';
+        return;
+    }
+
     const form = document.getElementById('login-form');
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -19,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                localStorage.setItem('directusToken', data.data.access_token);
+                sessionStorage.setItem('directusToken', data.data.access_token);
                 window.location.href = 'admin.html';
             } else {
                 throw new Error(data.errors[0].message);

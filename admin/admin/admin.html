@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <form id="link-form">
+        <input type="hidden" id="link-id">
+        <input type="text" id="title" placeholder="Titel" required>
+        <input type="url" id="url" placeholder="URL" required>
+        <button type="submit">Speichern</button>
+        <button type="button" id="cancel-button" style="display: none;">Abbrechen</button>
+    </form>
+    <table id="links-table">
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>URL</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="admin.js"></script>
+</body>
+</html>
